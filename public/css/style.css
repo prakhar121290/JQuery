@@ -1,0 +1,39 @@
+th{
+  text-align: center;
+}
+img{
+  height: 40px;
+  width: 40px;
+}
+table tr .edit{
+  display: none;
+}
+table tr.edit .edit {
+  display: initial;
+}
+table tr.edit .noedit {
+  display: none;
+}
+div.newdata{
+  height: 1000px;
+  background: #09F;
+  margin: 10px 0;
+}
+#main{
+  background-color: lightgreen;
+  text-align: center;
+}
+.navbar-form{
+  background-color: green;
+}
+.navbar-head{
+  color: white;
+  margin-top: 10px;
+}
+.form-control, .btn, .modal-footer .btn+.btn{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#details_head, #poster_head{
+  margin: 0 10px 10px 0;
+}

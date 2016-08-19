@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
+	<title></title>
+</head>
+<body>
+   	<div class="container" id="main">
+   		<div class="navbar-form">
+   		    <h2 class="navbar-head">Shop-Kart Registration</h2><br/>
+            <input type="text" id="textbox" class="form-control" placeholder="Search the database..">
+            <button type="button" id="find" class="btn btn-danger" value="Search">Search</button>
+			<button type="button" id="load" class="btn btn-info" value="Load">Load</button>
+            
+             <!--Adding Modal window for Add button-->
+             <a href="#add_record" role="button" class="btn btn-warning" data-toggle="modal">Add record </a>
+			<div class="modal fade" id="add_record">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Registration details</h4>
+						</div><!--End modal-header-->
+						
+						<div class="modal-body">
+						<h4>Your details</h4>
+						<p>
+							Please fill the required fields for registration mentioned below
+						</p>
+						<form id="formBtnSubmit">
+							<div class="form-group">
+								<input class="form-control" id="inputName" placeholder="Name" type="text" required>		
+							</div><!--End form-group-->
+							
+							<div class="form-group">
+								<input class="form-control" id="inputGender" placeholder="Gender" type="text" required>	
+							</div><!--End form-group-->
+
+							<div class="form-group">								
+								<input class="form-control" id="inputEmail" placeholder="E-mail" type="email" required>								
+							</div><!--End form-group-->
+
+							<div class="form-group">								
+								<input class="form-control" id="inputPhone" placeholder="Phone" type="number" required>									
+							</div><!--End form-group-->
+
+							<div class="form-group">							
+								<input class="form-control" id="inputProductID" placeholder="Product ID" type="number">								
+							</div><!--End form-group-->
+
+							<div class="form-group">								
+								<input class="form-control" id="inputFavoriteLaptop" placeholder="Laptop Brand Name " type="text">								
+							</div><!--End form-group-->
+
+							<div class="form-group">								
+								<textarea class="form-control" id="inputAddress" placeholder="Address" rows="3"></textarea>							
+							</div><!--End form-group-->
+
+							<div>
+								<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+							    <input class="btn btn-primary" type="submit" value="Submit"/>
+							</div><!--End form-group-->							
+						</form>
+						</div><!--End modal-body-->						
+					</div><!--End modal-content-->
+				</div><!--End modal-dialog-->
+			</div><!-- End myModal-->
+        </div>
+       	<div class="row">
+        	<div class="col-12">
+            	<div class="thumbnails row">
+                	<div class="col-sm-12">
+                	<h3 id="details_head">Customer Details</h3>
+                    	<div class="thumbnail" id="right_col">
+                        	<div class="table-responsive" id="tble">
+                        	<table class="table table-bordered" id="scroll">
+                        	<thead class="tblheader">
+                				<tr class="table-bordered">
+								<th>ID</th>
+								<th>Name</th>
+								<th>Gender</th>
+								<th>Email</th>
+								<th>Phone</th>
+								<th>Actions</th>
+								</tr>
+							</thead>
+                    		<tbody class="table_data" >
+                    			<template class="templateRecord">
+									<tr class="table-bordered" data-id="{{id}}">
+									<td> {{id}} </td>
+									<td><span class="noedit name">{{name}}</span>
+										<input class="edit name" /></td>
+									<td><span class="noedit gender">{{gender}}</span>
+										<input class="edit gender" /></td>
+									<td><span class="noedit email">{{email}}</span>
+										<input class="edit email" /></td>
+									<td><span class="noedit phone">{{phone}}</span>
+										<input class="edit phone" /></td>
+									<td>
+								      <button data-id="{{id}}" class="update noedit">Update</button>
+								      <button class="saveEdit edit">Save</button>
+								      <button class="cancelEdit edit">Cancel</button>
+									  <button data-id="{{id}}" class="delete">Delete</button>
+								    </td>
+								    </tr>										         
+								</template>
+							</tbody>
+							</table>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   	</div>
+	  <script src="http://code.jquery.com/jquery.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <script src="js/script.js"></script>
+	  <script src="js/mustache.js"></script>
+	  <script src="js/modernizr-2.6.2.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>
